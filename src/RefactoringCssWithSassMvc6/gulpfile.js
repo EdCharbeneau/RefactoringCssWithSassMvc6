@@ -5,6 +5,7 @@ var gulp = require("gulp"),
     concat = require("gulp-concat"),
     cssmin = require("gulp-cssmin"),
     uglify = require("gulp-uglify"),
+    sass = require("gulp-sass"), //requrie sass
     project = require("./project.json");
 
 var paths = {
@@ -43,3 +44,18 @@ gulp.task("min:css", function () {
 });
 
 gulp.task("min", ["min:js", "min:css"]);
+
+//Sass
+paths.sass = paths.webroot + "css/**/*.scss";
+paths.cssOutput = paths.webroot + "css";
+
+gulp.task('sass', function () {
+    gulp.src(paths.sass)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(paths.cssOutput));
+});
+
+//Watch task
+gulp.task('sass:watch', function () {
+    gulp.watch(paths.sass, ['sass']);
+});
