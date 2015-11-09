@@ -6,14 +6,11 @@
     <title>@ViewData["Title"] - RefactoringCssWithSassMvc6</title>
 
     <environment names="Development">
-        <link href="~/css/grid.css" rel="stylesheet" />
-        <link href="~/css/reset.css" rel="stylesheet" />
         <link href="~/css/screen.css" rel="stylesheet" />
-        <link href="~/css/typography.css" rel="stylesheet" />
     </environment>
-    @*<environment names="Staging,Production">
-            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        </environment>*@
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/css/screen.min.css" asp-append-version="true" />
+    </environment>
 </head>
 <body>
     @RenderBody()

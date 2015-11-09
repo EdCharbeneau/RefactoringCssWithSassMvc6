@@ -1,0 +1,46 @@
+$layout-width: 980px;
+$gutter: 24px;
+$small-device-width: 767px;
+$vertical-whitespace: 20px;
+
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+// Predefined column widths
+$third: 33.33%;
+$two-thirds: 66.66%;
+
+
+// Grid Mixins
+@mixin row()
+{
+    margin: 0 auto;
+    max-width: $layout-width;
+    *zoom: 1;
+    padding: $vertical-whitespace 0;
+
+    &:after
+    {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin column($column-width: 100%)
+{
+    float: left;
+    padding: 0 $gutter;
+    width: $column-width;
+
+    @media only screen and (max-width: $small-device-width)
+    {
+        /* Small Device Styles here */
+        float: none;
+        width: auto !important;
+        padding: 0 !important;
+    }
+}
