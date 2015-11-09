@@ -1,0 +1,22 @@
+@mixin button-base($padding:12px 6px, $margin: 0 4px) {
+    background-color: $base-color;
+    color: $contrast-color;
+    display: block;
+    text-decoration: none;
+    padding: $padding;
+    margin: $margin;
+    &:hover {
+        background-color: $highlight-color;
+    }
+}
+
+@mixin square-button($margin, $padding) {
+	@include button-base($margin, $padding);
+    text-align: center;
+    border: 1px $accent-color solid;
+}
+
+@mixin round-button($margin, $padding, $radius: 3px) {
+    @include button-base($margin, $padding);
+    border-radius: $radius;
+}

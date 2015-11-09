@@ -1,12 +1,13 @@
-﻿/*
+/*
     Site or App Theme styles
 */
-// Color variables
-$base-color: #d0d0d0;
-$accent-color: #0ca0c6;
-$highlight-color: #FFF;
-$contrast-color: #1e1e1e;
 
+@import "modules/settings",
+		"modules/reset",
+		"modules/grid",
+		"modules/layout",
+		"modules/typography",
+		"modules/buttons";
 body {
     background-color: $highlight-color;
 }
@@ -32,29 +33,6 @@ h1, h2, h3 {
 h1.section-heading {
     font-size: 23px;
     color: #808080;
-}
-
-@mixin button-base($padding:12px 6px, $margin: 0 4px) {
-    background-color: $base-color;
-    color: $contrast-color;
-    display: block;
-    text-decoration: none;
-    padding: $padding;
-    margin: $margin;
-    &:hover {
-        background-color: $highlight-color;
-    }
-}
-
-@mixin square-button($margin, $padding) {
-	@include button-base($margin, $padding);
-    text-align: center;
-    border: 1px $accent-color solid;
-}
-
-@mixin round-button($margin, $padding, $radius: 3px) {
-    @include button-base($margin, $padding);
-    border-radius: $radius;
 }
 
 nav {

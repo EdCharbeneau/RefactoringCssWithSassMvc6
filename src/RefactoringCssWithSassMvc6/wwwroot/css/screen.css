@@ -1,0 +1,224 @@
+/*
+    Site or App Theme styles
+*/
+/* 
+    CSS Reset for more information see http://meyerweb.com/eric/tools/css/reset/index.html
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#master-header > div {
+  margin: 0 auto;
+  max-width: 980px;
+  *zoom: 1;
+  padding: 20px 0; }
+  #master-header > div:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #master-header > div h1 {
+    float: left;
+    padding: 0 24px;
+    width: 33.33%; }
+    @media only screen and (max-width: 767px) {
+      #master-header > div h1 {
+        /* Small Device Styles here */
+        float: none;
+        width: auto !important;
+        padding: 0 !important; } }
+  #master-header > div nav {
+    float: left;
+    padding: 0 24px;
+    width: 66.66%; }
+    @media only screen and (max-width: 767px) {
+      #master-header > div nav {
+        /* Small Device Styles here */
+        float: none;
+        width: auto !important;
+        padding: 0 !important; } }
+
+#main-content {
+  margin: 0 auto;
+  max-width: 980px;
+  *zoom: 1;
+  padding: 20px 0; }
+  #main-content:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #main-content #secondary {
+    float: left;
+    padding: 0 24px;
+    width: 33.33%; }
+    @media only screen and (max-width: 767px) {
+      #main-content #secondary {
+        /* Small Device Styles here */
+        float: none;
+        width: auto !important;
+        padding: 0 !important; } }
+  #main-content > section {
+    float: left;
+    padding: 0 24px;
+    width: 66.66%; }
+    @media only screen and (max-width: 767px) {
+      #main-content > section {
+        /* Small Device Styles here */
+        float: none;
+        width: auto !important;
+        padding: 0 !important; } }
+
+#master-footer > div {
+  margin: 0 auto;
+  max-width: 980px;
+  *zoom: 1;
+  padding: 20px 0; }
+  #master-footer > div:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #master-footer > div section {
+    float: left;
+    padding: 0 24px;
+    width: 100%; }
+    @media only screen and (max-width: 767px) {
+      #master-footer > div section {
+        /* Small Device Styles here */
+        float: none;
+        width: auto !important;
+        padding: 0 !important; } }
+
+/*
+    Some basic typography styles
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  margin-top: 14px; }
+
+h1 {
+  font-size: 44px; }
+
+h2 {
+  font-size: 37px; }
+
+h3 {
+  font-size: 27px; }
+
+h4 {
+  font-size: 23px; }
+
+h5 {
+  font-size: 17px; }
+
+h6 {
+  font-size: 14px; }
+
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 17px; }
+
+body {
+  background-color: #FFF; }
+
+#master-header {
+  background-color: #0ca0c6;
+  color: #FFF; }
+  #master-header h1 {
+    color: #FFF; }
+
+#master-footer {
+  background-color: #1e1e1e;
+  border-top: 3px #0ca0c6 solid;
+  color: #FFF; }
+
+h1, h2, h3 {
+  color: #0ca0c6; }
+
+h1.section-heading {
+  font-size: 23px;
+  color: #808080; }
+
+nav#primary ul {
+  float: right; }
+  nav#primary ul li {
+    float: left; }
+
+nav#primary a {
+  background-color: #d0d0d0;
+  color: #1e1e1e;
+  display: block;
+  text-decoration: none;
+  padding: 12px 6px;
+  margin: 0 4px;
+  border-radius: 3px; }
+  nav#primary a:hover {
+    background-color: #FFF; }
+
+nav#secondary a {
+  background-color: #d0d0d0;
+  color: #1e1e1e;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  margin: 2px;
+  text-align: center;
+  border: 1px #0ca0c6 solid; }
+  nav#secondary a:hover {
+    background-color: #FFF; }
